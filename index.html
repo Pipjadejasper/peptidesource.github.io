@@ -13,24 +13,55 @@ body {
     color: #222;
 }
 
+/* ===== HERO HEADER WITH DNA IMAGE ===== */
 header {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    height: 85vh;
+    background: url('assets/dna-header.jpg') no-repeat left center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header-overlay {
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.1) 20%,
+        rgba(0,0,0,0.6) 60%,
+        rgba(0,0,0,0.85) 100%
+    );
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header-content {
     color: white;
-    padding: 80px 20px;
-    text-align: center;
+    text-align: right;
+    padding-right: 8%;
+    max-width: 600px;
 }
 
-header h1 {
+.header-content h1 {
     margin: 0;
-    font-size: 42px;
+    font-size: 48px;
 }
 
-header p {
-    margin-top: 10px;
-    font-size: 18px;
+.header-content p {
+    margin-top: 15px;
+    font-size: 20px;
     opacity: 0.9;
 }
 
+.header-content .sub {
+    margin-top: 10px;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* ===== PRODUCTS ===== */
 section {
     padding: 50px 20px;
 }
@@ -62,6 +93,7 @@ section {
     font-weight: bold;
 }
 
+/* ===== FORM ===== */
 .container {
     max-width: 600px;
     margin: 60px auto 0 auto;
@@ -126,15 +158,45 @@ footer {
     font-size: 13px;
     color: #666;
 }
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header-overlay {
+        justify-content: center;
+    }
+
+    .header-content {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .header-content h1 {
+        font-size: 32px;
+    }
+
+    .header-content p {
+        font-size: 16px;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Vietnam Peptides</h1>
-    <p>Research Grade Peptides | Fitness Community Vietnam</p>
-    <div>All vials include BAC water</div>
+    <div class="header-overlay">
+        <div class="header-content">
+            <h1>Vietnam Peptides</h1>
+            <p>Research Grade Peptides | Fitness Community Vietnam</p>
+            <div class="sub">All vials include BAC water</div>
+        </div>
+    </div>
 </header>
 
 <section class="products">
